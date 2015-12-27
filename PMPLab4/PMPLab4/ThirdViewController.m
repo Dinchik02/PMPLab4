@@ -8,6 +8,7 @@
 
 #import "ThirdViewController.h"
 #import "Student.h"
+#import "FMDB/FMDatabase.h"
 
 @interface ThirdViewController ()
 {

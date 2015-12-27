@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FMDB/FMDatabase.h"
 
 @interface ThirdViewController : UIViewController
 
