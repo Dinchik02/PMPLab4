@@ -165,7 +165,7 @@
             </objects>
             <point key="canvasLocation" x="816" y="-55.5"/>
         </scene>
-        <!--Lab 4.3-->
+        <!--Lab 4.3-4.4-->
         <scene sceneID="TFv-ed-vSw">
             <objects>
                 <viewController id="vSQ-HC-b8S" customClass="ThirdViewController" sceneMemberID="viewController">
@@ -265,7 +265,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Lab 4.3" id="d1L-wz-bIO"/>
+                    <navigationItem key="navigationItem" title="Lab 4.3-4.4" id="d1L-wz-bIO"/>
                     <connections>
                         <outlet property="firstNameField" destination="R9a-ju-s1y" id="VXN-s3-1TB"/>
                         <outlet property="lastNameField" destination="o5a-cI-p8D" id="o8W-I4-eeS"/>
