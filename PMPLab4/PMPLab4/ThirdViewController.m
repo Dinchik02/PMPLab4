@@ -94,8 +94,6 @@
         [str appendFormat:@"%@ %@\n", [result stringForColumnIndex:0], [result stringForColumnIndex:1]];
     }
     
-    NSLog(@"\n TEST:%@", str);
-
     self.textView.text = str;
 }
 
