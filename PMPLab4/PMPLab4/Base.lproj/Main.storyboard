@@ -21,7 +21,7 @@
             </objects>
             <point key="canvasLocation" x="-561" y="-55"/>
         </scene>
-        <!--View Controller-->
+        <!--Lab 4.1-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -33,39 +33,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVc-BX-o7H">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tCa-ms-Wh3">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="93" y="182" width="214" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hpk-sy-IBA">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Next"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="310" y="64" width="45" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="183" y="235" width="34" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="nki-L5-lHB" kind="show" id="3vu-a8-jL0"/>
+                                    <action selector="firstSaveButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Cg-zq-qCP"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="MVc-BX-o7H"/>
+                                <exclude reference="tCa-ms-Wh3"/>
+                                <exclude reference="Hpk-sy-IBA"/>
                             </mask>
                         </variation>
-                        <variation key="widthClass=compact">
+                        <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="MVc-BX-o7H"/>
+                                <include reference="tCa-ms-Wh3"/>
+                                <include reference="Hpk-sy-IBA"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="W0B-xv-LYe"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Lab 4.1" id="W0B-xv-LYe">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="NMT-BB-tZq">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4Xh-3E-6wV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="nki-L5-lHB" kind="show" id="UdU-yt-OvT"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="firstTextField" destination="tCa-ms-Wh3" id="Zhq-mX-gMY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-55"/>
+            <point key="canvasLocation" x="132" y="-55.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Lab 4.2-->
         <scene sceneID="0TJ-R8-kD8">
             <objects>
-                <viewController id="nki-L5-lHB" sceneMemberID="viewController">
+                <viewController id="nki-L5-lHB" customClass="SecondViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cav-1F-wyf"/>
                         <viewControllerLayoutGuide type="bottom" id="O4s-IO-rNy"/>
@@ -73,35 +99,54 @@
                     <view key="view" contentMode="scaleToFill" id="7J9-tQ-Ijm">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuV-mH-E4l">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Next"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="278" y="64" width="86" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UTe-j8-8xp">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="83" y="181" width="219" height="30"/>
                                 </variation>
-                                <connections>
-                                    <segue destination="vSQ-HC-b8S" kind="show" id="reU-nx-XHw"/>
-                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5J-Ke-dfg">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="175" y="231" width="34" height="30"/>
+                                </variation>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="fuV-mH-E4l"/>
+                                <exclude reference="UTe-j8-8xp"/>
+                                <exclude reference="w5J-Ke-dfg"/>
                             </mask>
                         </variation>
-                        <variation key="widthClass=compact">
+                        <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="fuV-mH-E4l"/>
+                                <include reference="UTe-j8-8xp"/>
+                                <include reference="w5J-Ke-dfg"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Lab 4.2" id="0ac-t4-Bcp">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="z5L-dk-y2G">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ove-sz-Yci">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="vSQ-HC-b8S" kind="show" id="Ogm-pS-kNT"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5oC-0L-1tf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816" y="-55"/>
+            <point key="canvasLocation" x="816" y="-55.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Lab 4.3-->
         <scene sceneID="TFv-ed-vSw">
             <objects>
                 <viewController id="vSQ-HC-b8S" sceneMemberID="viewController">
@@ -113,6 +158,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Lab 4.3" id="d1L-wz-bIO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BnS-nd-fvi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

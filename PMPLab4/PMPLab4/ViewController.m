@@ -16,12 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.firstTextField.text = [[NSUserDefaults standardUserDefaults]	objectForKey:@"text"];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)firstSaveButtonTapped:(id)sender {
+    NSLog(@"First text field log: %@", self.firstTextField.text);
+    [[NSUserDefaults standardUserDefaults] setObject: self.firstTextField.text forKey:@"text"];
+    [[NSUserDefaults standardUserDefaults]	synchronize];
 }
 
 @end
