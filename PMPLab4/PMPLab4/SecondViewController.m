@@ -8,7 +8,9 @@
 
 #import "SecondViewController.h"
 
-@interface SecondViewController ()
+@interface SecondViewController () {
+    NSMutableArray *_strings;
+}
 
 @end
 
@@ -16,6 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _strings = [NSMutableArray arrayWithContentsOfURL:[self plistURL]];
+    if (!_strings)
+        _strings = [NSMutableArray array];
+    
+    self.textView.text = [_strings componentsJoinedByString:@"\n"];
     // Do any additional setup after loading the view.
 }
 
@@ -24,14 +31,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+- (NSURL *)plistURL
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+{
+    return [[[[NSFileManager defaultManager]
+              URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:@"data.plist"];
+    
 }
-*/
+
+
+- (IBAction)saveButtonTapped:(id)sender {
+    NSLog(@"First text field log: %@", self.secondTextField.text);
+    [_strings addObject:self.secondTextField.text];
+    self.textView.text = [_strings componentsJoinedByString:@"\n"];
+    [_strings writeToURL:[self plistURL] atomically:YES];
+}
+
 
 @end

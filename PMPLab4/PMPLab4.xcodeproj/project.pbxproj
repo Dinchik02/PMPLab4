@@ -14,6 +14,7 @@
 		D58EAF3A1C30498A00524B40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D58EAF391C30498A00524B40 /* Assets.xcassets */; };
 		D58EAF3D1C30498A00524B40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D58EAF3B1C30498A00524B40 /* LaunchScreen.storyboard */; };
 		D58EAF461C30573300524B40 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D58EAF451C30573300524B40 /* SecondViewController.m */; };
+		D58EAF491C305FEB00524B40 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D58EAF481C305FEB00524B40 /* ThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		D58EAF3E1C30498A00524B40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D58EAF441C30573300524B40 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		D58EAF451C30573300524B40 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		D58EAF471C305FEB00524B40 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		D58EAF481C305FEB00524B40 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				D58EAF331C30498A00524B40 /* ViewController.h */,
 				D58EAF341C30498A00524B40 /* ViewController.m */,
 				D58EAF361C30498A00524B40 /* Main.storyboard */,
+				D58EAF471C305FEB00524B40 /* ThirdViewController.h */,
+				D58EAF481C305FEB00524B40 /* ThirdViewController.m */,
 				D58EAF441C30573300524B40 /* SecondViewController.h */,
 				D58EAF451C30573300524B40 /* SecondViewController.m */,
 				D58EAF391C30498A00524B40 /* Assets.xcassets */,
@@ -155,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D58EAF461C30573300524B40 /* SecondViewController.m in Sources */,
+				D58EAF491C305FEB00524B40 /* ThirdViewController.m in Sources */,
 				D58EAF351C30498A00524B40 /* ViewController.m in Sources */,
 				D58EAF321C30498A00524B40 /* AppDelegate.m in Sources */,
 				D58EAF2F1C30498A00524B40 /* main.m in Sources */,

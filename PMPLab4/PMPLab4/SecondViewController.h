@@ -10,4 +10,7 @@
 
 @interface SecondViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *secondTextField;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+
 @end
