@@ -67,7 +67,7 @@
     NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
     archiver.outputFormat = NSPropertyListXMLFormat_v1_0;
     
-    [archiver encodeObject:_students forKey:@"students"];
+    [archiver encodeObject:_students forKey:@"root"];
     [archiver finishEncoding];
     
     [data writeToURL:[self plistURL] atomically:YES];
