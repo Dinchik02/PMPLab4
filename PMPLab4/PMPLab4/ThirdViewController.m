@@ -21,6 +21,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _db = [FMDatabase databaseWithPath:[[self dbPath] absoluteString]];
+    [_db open];
+    [_db executeUpdate:@"CREATE	TABLE	IF	NOT	EXISTS	students	(name	TEXT,	surname TEXT)"];
+     
     NSData *plistData = [NSData dataWithContentsOfURL:[self plistURL]];
     _students =	[[NSKeyedUnarchiver unarchiveObjectWithData:plistData] mutableCopy];
     if (!_students){
@@ -46,6 +51,12 @@
               URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:@"data.plist"];
     
 }
+
+-(NSURL *)dbPath {
+    return [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:@"dataxml.sqlite"];
+}
+
+
 - (IBAction)saveButtonTapped:(id)sender {
     Student *student = [[Student alloc] init];
     student.firstName = self.firstNameField.text;
@@ -56,10 +67,15 @@
     NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
     archiver.outputFormat = NSPropertyListXMLFormat_v1_0;
     
-    [archiver encodeObject:_students forKey:@"root"];
+    [archiver encodeObject:_students forKey:@"students"];
     [archiver finishEncoding];
     
     [data writeToURL:[self plistURL] atomically:YES];
+    
+    NSString *SQL = [NSString stringWithFormat:@"INSERT	INTO	students	(name, surname)	VALUES	('%@',	'%@')",
+                     self.firstNameField.text,	self.lastNameField.text];
+    
+    [_db executeUpdate:SQL];
     
     NSMutableString *str = [NSMutableString string];
     
@@ -68,6 +84,19 @@
     }
     self.textView.text = str;
 
+}
+- (IBAction)searchButtonTapped:(id)sender {
+    NSString *SQL = [NSString stringWithFormat:@"SELECT * FROM students WHERE name LIKE '%@'", self.firstNameField.text];
+    FMResultSet *result = [_db executeQuery:SQL];
+    NSMutableString *str = [NSMutableString string];
+    while ([result next])
+    {
+        [str appendFormat:@"%@ %@\n", [result stringForColumnIndex:0], [result stringForColumnIndex:1]];
+    }
+    
+    NSLog(@"\n TEST:%@", str);
+
+    self.textView.text = str;
 }
 
 @end

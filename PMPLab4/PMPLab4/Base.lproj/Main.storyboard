@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cOk-YP-mcO">
     <dependencies>
-        <deployment version="2304" identifier="iOS"/>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
@@ -217,14 +217,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="264" width="314" height="139"/>
+                                    <rect key="frame" x="20" y="264" width="314" height="226"/>
                                 </variation>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mw-k4-8Bz">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Search"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="150" y="555" width="55" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="searchButtonTapped:" destination="vSQ-HC-b8S" eventType="touchUpInside" id="yns-O8-L8k"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqF-9V-u4g">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="160" y="446" width="34" height="30"/>
+                                    <rect key="frame" x="160" y="512" width="34" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="vSQ-HC-b8S" eventType="touchUpInside" id="nyo-d8-Xrz"/>
@@ -239,6 +249,7 @@
                                 <exclude reference="LLS-sh-3Pj"/>
                                 <exclude reference="o5a-cI-p8D"/>
                                 <exclude reference="9LZ-h4-h4m"/>
+                                <exclude reference="5Mw-k4-8Bz"/>
                                 <exclude reference="PqF-9V-u4g"/>
                             </mask>
                         </variation>
@@ -249,6 +260,7 @@
                                 <include reference="LLS-sh-3Pj"/>
                                 <include reference="o5a-cI-p8D"/>
                                 <include reference="9LZ-h4-h4m"/>
+                                <include reference="5Mw-k4-8Bz"/>
                                 <include reference="PqF-9V-u4g"/>
                             </mask>
                         </variation>

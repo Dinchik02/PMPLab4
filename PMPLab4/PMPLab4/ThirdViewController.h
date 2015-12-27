@@ -15,4 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *lastNameField;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
+@property FMDatabase *db;
+
 @end
