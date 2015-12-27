@@ -210,6 +210,26 @@
                                     <rect key="frame" x="121" y="192" width="213" height="30"/>
                                 </variation>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9LZ-h4-h4m">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="264" width="314" height="139"/>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqF-9V-u4g">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="160" y="446" width="34" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="vSQ-HC-b8S" eventType="touchUpInside" id="nyo-d8-Xrz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -218,6 +238,8 @@
                                 <exclude reference="clQ-5x-ycD"/>
                                 <exclude reference="LLS-sh-3Pj"/>
                                 <exclude reference="o5a-cI-p8D"/>
+                                <exclude reference="9LZ-h4-h4m"/>
+                                <exclude reference="PqF-9V-u4g"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -226,6 +248,8 @@
                                 <include reference="clQ-5x-ycD"/>
                                 <include reference="LLS-sh-3Pj"/>
                                 <include reference="o5a-cI-p8D"/>
+                                <include reference="9LZ-h4-h4m"/>
+                                <include reference="PqF-9V-u4g"/>
                             </mask>
                         </variation>
                     </view>
@@ -233,6 +257,7 @@
                     <connections>
                         <outlet property="firstNameField" destination="R9a-ju-s1y" id="VXN-s3-1TB"/>
                         <outlet property="lastNameField" destination="o5a-cI-p8D" id="o8W-I4-eeS"/>
+                        <outlet property="textView" destination="9LZ-h4-h4m" id="qNd-s1-MmO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BnS-nd-fvi" userLabel="First Responder" sceneMemberID="firstResponder"/>

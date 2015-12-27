@@ -15,6 +15,7 @@
 		D58EAF3D1C30498A00524B40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D58EAF3B1C30498A00524B40 /* LaunchScreen.storyboard */; };
 		D58EAF461C30573300524B40 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D58EAF451C30573300524B40 /* SecondViewController.m */; };
 		D58EAF491C305FEB00524B40 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D58EAF481C305FEB00524B40 /* ThirdViewController.m */; };
+		D58EAF4F1C30663800524B40 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = D58EAF4E1C30663800524B40 /* Student.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		D58EAF451C30573300524B40 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		D58EAF471C305FEB00524B40 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		D58EAF481C305FEB00524B40 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		D58EAF4D1C30651A00524B40 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		D58EAF4E1C30663800524B40 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 				D58EAF3B1C30498A00524B40 /* LaunchScreen.storyboard */,
 				D58EAF3E1C30498A00524B40 /* Info.plist */,
 				D58EAF2D1C30498A00524B40 /* Supporting Files */,
+				D58EAF4D1C30651A00524B40 /* Student.h */,
+				D58EAF4E1C30663800524B40 /* Student.m */,
 			);
 			path = PMPLab4;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				D58EAF351C30498A00524B40 /* ViewController.m in Sources */,
 				D58EAF321C30498A00524B40 /* AppDelegate.m in Sources */,
 				D58EAF2F1C30498A00524B40 /* main.m in Sources */,
+				D58EAF4F1C30663800524B40 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

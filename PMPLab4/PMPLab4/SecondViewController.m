@@ -32,7 +32,6 @@
 }
 
 - (NSURL *)plistURL
-
 {
     return [[[[NSFileManager defaultManager]
               URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:@"data.plist"];

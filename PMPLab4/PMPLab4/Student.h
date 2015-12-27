@@ -1,13 +1,16 @@
 //
-//  Header.h
+//  Student.h
 //  PMPLab4
 //
 //  Created by Diana Volodchenko on 12/27/15.
 //  Copyright © 2015 Diana Volodchenko. All rights reserved.
 //
 
-#ifndef Header_h
-#define Header_h
+#import <Foundation/Foundation.h>
 
+@interface Student : NSObject
 
-#endif /* Header_h */
+@property NSString *firstName;
+@property NSString *lastName;
+
+@end
